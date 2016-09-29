@@ -23,9 +23,6 @@ mv composer.phar $HOME/.phpenv/versions/5.5/bin/composer
 cd /tmp/pickle
 $HOME/.phpenv/versions/5.5/bin/composer install
 
-echo 'Creating symbolic link for pickle'
-ln -s /tmp/pickle/bin/pickle /usr/bin/
-
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
 printf '\n' | bin/pickle install memcache

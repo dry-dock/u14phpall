@@ -64,6 +64,7 @@ eval "$(phpenv init -)"
 
 #Download pickle
 git clone https://github.com/FriendsOfPHP/pickle.git /tmp/pickle
+ln -s /tmp/pickle/bin/pickle /usr/bin/
 
 # Install librabbitmq
 echo "============ Installing librabbitmq ============"

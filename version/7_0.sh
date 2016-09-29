@@ -21,9 +21,6 @@ curl -s http://getcomposer.org/installer | php
 chmod +x composer.phar
 mv composer.phar $HOME/.phpenv/versions/7.0/bin/composer
 
-echo 'Creating symbolic link for pickle'
-ln -s /tmp/pickle/bin/pickle /usr/bin/
-
 #install pickle
 cd /tmp/pickle
 $HOME/.phpenv/versions/7.0/bin/composer install
