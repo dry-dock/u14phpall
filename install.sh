@@ -1,14 +1,14 @@
 #!/bin/bash -e
 
 sudo apt-get clean
-sudo mv /var/lib/apt/lists /tmp
+sudo mv /var/lib/apt/lists/* /tmp
 sudo mkdir -p /var/lib/apt/lists/partial
 sudo apt-get clean
 
 # Install dependencies
 echo "=========== Installing dependencies ============"
 apt-get update
-apt-get install -y git wget cmake libmcrypt-dev libreadline-dev libzmq-dev 
+apt-get install -y git wget cmake libmcrypt-dev libreadline-dev libzmq-dev
 apt-get install libxml2-dev     \
                 libjpeg-dev     \
                 libpng-dev      \
@@ -34,7 +34,7 @@ apt-get install libxml2-dev     \
                 libxslt1-dev    \
                 libmcrypt-dev
 apt-get install php5-dev
-	
+
 # Install libmemcached
 echo "========== Installing libmemcached =========="
 wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
@@ -62,7 +62,7 @@ export PATH=$HOME/.phpenv/bin:$PATH
 echo " 51 PATH=$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
-#Download pickle 
+#Download pickle
 git clone https://github.com/FriendsOfPHP/pickle.git /tmp/pickle
 
 # Install librabbitmq
