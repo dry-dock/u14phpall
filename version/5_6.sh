@@ -7,7 +7,7 @@ php-build -i development 5.6.7 $HOME/.phpenv/versions/5.6
 
 # Setting phpenv to 5.6.7
 echo "============ Setting phpenv to 5.6 ============"
-phpenv rehash 
+phpenv rehash
 phpenv global 5.6
 
 # Install phpunit
@@ -25,6 +25,9 @@ mv composer.phar $HOME/.phpenv/versions/5.6/bin/composer
 #install pickle
 cd /tmp/pickle
 $HOME/.phpenv/versions/5.6/bin/composer install
+
+echo 'Creating symbolic link for pickle'
+ln -s /tmp/pickle/bin/pickle /usr/bin/
 
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
