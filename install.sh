@@ -42,6 +42,10 @@ apt-get install libxml2-dev     \
                 libmcrypt-dev
 apt-get install php5.6-dev
 
+# create soft links as header files have been renamed
+ln -s /usr/include/tidy/tidybuffio.h /usr/include/tidy/buffio.h
+ln -s /usr/include/tidy/tidyplatform.h /usr/include/tidy/platform.h
+
 # Install libmemcached
 echo "========== Installing libmemcached =========="
 wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
