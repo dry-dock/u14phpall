@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 # Build PHP 5.4.39
 echo "============ Building PHP 5.4 =============="
 php-build -i development 5.4.39 $HOME/.phpenv/versions/5.4
