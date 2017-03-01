@@ -39,8 +39,8 @@ apt-get install libxml2-dev     \
                 libpspell-dev   \
                 libsnmp-dev     \
                 libxslt1-dev    \
-                libmcrypt-dev
-apt-get install php5.6-dev
+                libmcrypt-dev   \
+                php5.6-dev
 
 # create soft links as header files have been renamed
 ln -s /usr/include/tidy/tidybuffio.h /usr/include/tidy/buffio.h
