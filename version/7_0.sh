@@ -11,9 +11,9 @@ phpenv global 7.0
 
 # Install phpunit
 echo "============ Installing PHPUnit ============="
-wget https://phar.phpunit.de/phpunit.phar
-chmod +x phpunit.phar
-mv phpunit.phar $HOME/.phpenv/versions/7.0/bin/phpunit
+wget https://phar.phpunit.de/phpunit-5.7.phar
+chmod +x phpunit-5.7.phar
+mv phpunit-5.7.phar $HOME/.phpenv/versions/7.0/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
