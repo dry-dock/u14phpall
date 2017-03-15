@@ -2,7 +2,7 @@
 
 #Build PHP 7.0.1
 echo "============ Building PHP 7.0 =============="
-php-build -i development 7.0.1 $HOME/.phpenv/versions/7.0
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2" php-build -i development 7.0.1 $HOME/.phpenv/versions/7.0
 
 # Setting phpenv to 7.0.1
 echo "============ Setting phpenv to 7.0 ============"

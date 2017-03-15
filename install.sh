@@ -38,7 +38,8 @@ apt-get install libxml2-dev     \
                 libpspell-dev   \
                 libsnmp-dev     \
                 libxslt1-dev    \
-                libmcrypt-dev
+                libmcrypt-dev   \
+                bzip2
 
 # create soft links as header files have been renamed
 ln -s /usr/include/tidy/tidybuffio.h /usr/include/tidy/buffio.h
