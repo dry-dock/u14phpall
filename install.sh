@@ -47,7 +47,7 @@ ln -s /usr/include/tidy/tidyplatform.h /usr/include/tidy/platform.h
 
 # Install libmemcached
 echo "========== Installing libmemcached =========="
-wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
+wget -nv https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
 tar xzf libmemcached-1.0.18.tar.gz && cd libmemcached-1.0.18
 ./configure --enable-sasl
 make && make install
@@ -78,7 +78,7 @@ ln -s /tmp/pickle/bin/pickle /usr/bin/
 
 # Install librabbitmq
 echo "============ Installing librabbitmq ============"
-cd /tmp && wget https://github.com/alanxz/rabbitmq-c/releases/download/v0.7.1/rabbitmq-c-0.7.1.tar.gz
+cd /tmp && wget -nv https://github.com/alanxz/rabbitmq-c/releases/download/v0.7.1/rabbitmq-c-0.7.1.tar.gz
 tar xzf rabbitmq-c-0.7.1.tar.gz
 mkdir build && cd build
 cmake /tmp/rabbitmq-c-0.7.1

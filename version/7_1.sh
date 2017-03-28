@@ -11,13 +11,13 @@ phpenv global 7.1
 
 # Install phpunit
 echo "============ Installing PHPUnit ============="
-wget https://phar.phpunit.de/phpunit-5.7.phar
+wget -nv https://phar.phpunit.de/phpunit-5.7.phar
 chmod +x phpunit-5.7.phar
 mv phpunit-5.7.phar $HOME/.phpenv/versions/7.1/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
-curl -s http://getcomposer.org/installer | php
+curl -sS http://getcomposer.org/installer | php
 chmod +x composer.phar
 mv composer.phar $HOME/.phpenv/versions/7.1/bin/composer
 
