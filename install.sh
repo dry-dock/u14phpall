@@ -31,7 +31,6 @@ apt-get install libxml2-dev     \
                 libt1-dev       \
                 libgd2-xpm-dev  \
                 libgmp-dev      \
-                libsasl2-dev    \
                 libmhash-dev    \
                 unixodbc-dev    \
                 freetds-dev     \
@@ -44,14 +43,6 @@ apt-get install libxml2-dev     \
 # create soft links as header files have been renamed
 ln -s /usr/include/tidy/tidybuffio.h /usr/include/tidy/buffio.h
 ln -s /usr/include/tidy/tidyplatform.h /usr/include/tidy/platform.h
-
-# Install libmemcached
-echo "========== Installing libmemcached =========="
-wget -nv https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
-tar xzf libmemcached-1.0.18.tar.gz && cd libmemcached-1.0.18
-./configure --enable-sasl
-make && make install
-cd .. && rm -fr libmemcached-1.0.18*
 
 # Install phpenv
 echo "============ Installing phpenv ============="
@@ -69,7 +60,7 @@ rm -rf $HOME/php-build
 
 # Activate phpenv
 export PATH=$HOME/.phpenv/bin:$PATH
-echo " 51 PATH=$HOME/.phpenv/bin:$PATH"
+echo "PATH=$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
 #Download pickle
