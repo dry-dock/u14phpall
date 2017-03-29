@@ -25,4 +25,15 @@ mv composer.phar $HOME/.phpenv/versions/7.0/bin/composer
 cd /tmp/pickle
 $HOME/.phpenv/versions/7.0/bin/composer install
 
+# Install php extensions
+echo "=========== Installing PHP extensions =============="
+printf '\n' | bin/pickle install memcached
+printf '\n' | bin/pickle install amqp
+printf '\n' | bin/pickle install zmq-beta
+printf '\n' | bin/pickle install redis
+
+echo "--with-openssl-dir=yes" >> /tmp/pickle-mongodb-opts
+printf '\n' | bin/pickle install --with-configure-options=/tmp/pickle-mongodb-opts mongodb
+rm /tmp/pickle-mongodb-opts
+
 cd /
