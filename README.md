@@ -1,13 +1,37 @@
 u14phpall
 ===============
-Shippable CI image for php on Ubuntu 14.04. Available php versions:
- 1. php5.4
- 2. php5.5
- 3. php5.6
- 4. php7.0
- 5. php 7.1
 
+Shippable CI image for PHP on Ubuntu 14.04. The following PHP versions are available:
+
+  1. PHP 5.6
+  2. PHP 7.0
+  3. PHP 7.1
+
+Each PHP version is installed with php-build and managed with phpenv. Several 
+PHP extensions are also available out of the box. Unless otherwise noted, the 
+latest version of the extension at the time the image was built is what is 
+available in the image:
+
+  1. PHP 5.6
+
+      * amqp 1.6.0
+      * bzip
+      * intl
+      * memcache
+      * memcached 2.2.0
+      * mongo
+      * redis
+      * zmq
+
+  2. PHP 7.0 and PHP 7.1
+      * amqp
+      * bzip
+      * intl
+      * memcached
+      * redis
+      * zmq
 
 ## Services:
 
-use this link https://github.com/dry-dock/u14all for versions of the services
+This image is built on top of https://github.com/dry-dock/u14all. Please check 
+there for a list of all the services.
