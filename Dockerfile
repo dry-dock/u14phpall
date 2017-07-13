@@ -1,4 +1,4 @@
-FROM drydock/u14all:{{%TAG%}}
+FROM drydock/u14all:master
 
 ADD . /u14phpall
 
