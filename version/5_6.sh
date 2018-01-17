@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-#Build PHP 5.6.31
-echo "============ Building PHP 5.6.31 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 5.6.31 $HOME/.phpenv/versions/5.6
+#Build PHP 5.6.32
+echo "============ Building PHP 5.6.32 =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 5.6.32 $HOME/.phpenv/versions/5.6
 
-# Setting phpenv to 5.6.31
+# Setting phpenv to 5.6.32
 echo "============ Setting phpenv to 5.6 ============"
 phpenv rehash
 phpenv global 5.6

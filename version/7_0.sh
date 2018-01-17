@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-#Build PHP 7.0.23
-echo "============ Building PHP 7.0.23 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.0.23 $HOME/.phpenv/versions/7.0
+#Build PHP 7.0.26
+echo "============ Building PHP 7.0.26 =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.0.26 $HOME/.phpenv/versions/7.0
 
-# Setting phpenv to 7.0.23
+# Setting phpenv to 7.0.26
 echo "============ Setting phpenv to 7.0 ============"
 phpenv rehash
 phpenv global 7.0
