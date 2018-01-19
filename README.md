@@ -3,16 +3,16 @@ u14phpall
 
 Shippable CI image for PHP on Ubuntu 14.04. The following PHP versions are available:
 
-  1. PHP 5.6.31
-  2. PHP 7.0.23
-  3. PHP 7.1.9
+  1. PHP 5.6.32
+  2. PHP 7.0.26
+  3. PHP 7.2.0
 
 Each PHP version is installed with php-build and managed with phpenv. Several 
 PHP extensions are also available out of the box. Unless otherwise noted, the 
 latest version of the extension at the time the image was built is what is 
 available in the image:
 
-  1. PHP 5.6.31
+  1. PHP 5.6.32
 
       * amqp 1.6.0
       * bzip
@@ -23,7 +23,7 @@ available in the image:
       * redis
       * zmq
 
-  2. PHP 7.0.23 and PHP 7.1.9
+  2. PHP 7.0.26 and PHP 7.2.0
       * amqp
       * bzip
       * intl
