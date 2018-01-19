@@ -1,29 +1,29 @@
 #!/bin/bash -e
 
-#Build PHP 7.2.0
-echo "============ Building PHP 7.2.0 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.2.0 $HOME/.phpenv/versions/7.2
+#Build PHP 7.1.12
+echo "============ Building PHP 7.1.12 =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.1.12 $HOME/.phpenv/versions/7.1
 
-# Setting phpenv to 7.2.0
-echo "============ Setting phpenv to 7.2 ============"
+# Setting phpenv to 7.1.12
+echo "============ Setting phpenv to 7.1 ============"
 phpenv rehash
-phpenv global 7.2
+phpenv global 7.1
 
 # Install phpunit
 echo "============ Installing PHPUnit ============="
 wget -nv https://phar.phpunit.de/phpunit-5.7.phar
 chmod +x phpunit-5.7.phar
-mv phpunit-5.7.phar $HOME/.phpenv/versions/7.2/bin/phpunit
+mv phpunit-5.7.phar $HOME/.phpenv/versions/7.1/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
 curl -sS http://getcomposer.org/installer | php
 chmod +x composer.phar
-mv composer.phar $HOME/.phpenv/versions/7.2/bin/composer
+mv composer.phar $HOME/.phpenv/versions/7.1/bin/composer
 
 #install pickle
 cd /tmp/pickle
-$HOME/.phpenv/versions/7.2/bin/composer install
+$HOME/.phpenv/versions/7.1/bin/composer install
 
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
