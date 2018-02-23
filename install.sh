@@ -45,7 +45,6 @@ echo "============ Installing phpenv ============="
 git clone git://github.com/CHH/phpenv.git $HOME/phpenv
 $HOME/phpenv/bin/phpenv-install.sh
 echo 'export PATH=$HOME/.phpenv/bin:$PATH' >> /etc/drydock/.env
-echo 'eval "$(phpenv init -)"' >> /etc/drydock/.env
 rm -rf $HOME/phpenv
 
 # Install php-build
