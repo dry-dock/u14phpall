@@ -5,7 +5,7 @@ echo "phpenv versions"
 $HOME/.phpenv/bin/phpenv versions
 printf "\n\n"
 
-declare -a versions=( '5.6' '7.0' '7.1')
+declare -a versions=( '5.6' '7.0' '7.1' '7.2' )
 
 for version in "${versions[@]}"
   do

@@ -1,19 +1,19 @@
 #!/bin/bash -e
 
-#Build PHP 7.0.26
-echo "============ Building PHP 7.0.26 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.0.26 $HOME/.phpenv/versions/7.0
+#Build PHP 7.0.30
+echo "============ Building PHP 7.0.30 =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.0.30 $HOME/.phpenv/versions/7.0
 
-# Setting phpenv to 7.0.26
+# Setting phpenv to 7.0.30
 echo "============ Setting phpenv to 7.0 ============"
 phpenv rehash
 phpenv global 7.0
 
 # Install phpunit
 echo "============ Installing PHPUnit ============="
-wget -nv https://phar.phpunit.de/phpunit-5.7.phar
-chmod +x phpunit-5.7.phar
-mv phpunit-5.7.phar $HOME/.phpenv/versions/7.0/bin/phpunit
+wget -nv https://phar.phpunit.de/phpunit-6.5.phar
+chmod +x phpunit-6.5.phar
+mv phpunit-6.5.phar $HOME/.phpenv/versions/7.0/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
