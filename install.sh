@@ -12,7 +12,7 @@ echo "=========== Installing dependencies ============"
 add-apt-repository -y ppa:ondrej/php
 
 apt-get update
-apt-get install php5.6-dev php7.0-dev php7.1-dev php7.2-dev php7.2-dev
+apt-get install php5.6-dev php7.0-dev php7.1-dev php7.2-dev
 apt-get install php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
 
 apt-get install -y git wget cmake libmcrypt-dev libreadline-dev libzmq-dev
