@@ -17,7 +17,7 @@ mv phpunit-7.0.3.phar $HOME/.phpenv/versions/7.2/bin/phpunit
 
 #install pickle
 cd /tmp/pickle
-$HOME/.phpenv/versions/7.1/bin/composer install
+$HOME/.phpenv/versions/7.2/bin/composer install --no-dev
 
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
