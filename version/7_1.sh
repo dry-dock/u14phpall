@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-#Build PHP 7.1.17
+#Build PHP 7.1.18
 echo "============ Building PHP 7.1.18 =============="
 PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 7.1.18 $HOME/.phpenv/versions/7.1
 
-# Setting phpenv to 7.1.17
+# Setting phpenv to 7.1.18
 echo "============ Setting phpenv to 7.1 ============"
 phpenv rehash
 phpenv global 7.1
