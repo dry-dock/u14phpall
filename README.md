@@ -4,9 +4,9 @@ u14phpall
 Shippable CI image for PHP on Ubuntu 14.04. The following PHP versions are available:
 
   1. PHP 5.6.32
-  2. PHP 7.0.26
-  3. PHP 7.1.12
-  4. PHP 7.2.5
+  2. PHP 7.0.30
+  3. PHP 7.1.18
+  4. PHP 7.2.6
 
 Each PHP version is installed with php-build and managed with phpenv. Several 
 PHP extensions are also available out of the box. Unless otherwise noted, the 
