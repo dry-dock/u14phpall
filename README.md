@@ -24,7 +24,7 @@ available in the image:
       * redis
       * zmq
 
-  2. PHP 7.0.30 and PHP 7.1.18
+  2. PHP 7.0.30, PHP 7.1.18 and PHP 7.2.6
       * amqp
       * bzip
       * intl
