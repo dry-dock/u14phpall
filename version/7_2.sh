@@ -15,9 +15,15 @@ wget -nv https://phar.phpunit.de/phpunit-7.0.3.phar
 chmod +x phpunit-7.0.3.phar
 mv phpunit-7.0.3.phar $HOME/.phpenv/versions/7.2/bin/phpunit
 
+# Install Composer
+echo "============ Installing Composer ============"
+curl -sS http://getcomposer.org/installer | php
+chmod +x composer.phar
+mv composer.phar $HOME/.phpenv/versions/7.2/bin/composer
+
 #install pickle
 cd /tmp/pickle
-$HOME/.phpenv/versions/7.1/bin/composer install
+$HOME/.phpenv/versions/7.2/bin/composer install
 
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
