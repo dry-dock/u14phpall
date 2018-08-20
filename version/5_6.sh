@@ -1,19 +1,20 @@
 #!/bin/bash -e
 
-#Build PHP 5.6.36
-echo "============ Building PHP 5.6.36 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development 5.6.36 $HOME/.phpenv/versions/5.6
+PHP5.6_VERSION="5.6.37"
+echo "============ Building PHP5.6_VERSION =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development "$PHP5.6_VERSION" $HOME/.phpenv/versions/5.6
 
-# Setting phpenv to 5.6.36
+# Setting phpenv to PHP5.6_VERSION
 echo "============ Setting phpenv to 5.6 ============"
 phpenv rehash
 phpenv global 5.6
 
 # Install phpunit
+PHPUNIT_VERSION="5.7.27"
 echo "============ Installing PHPUnit ============="
-wget -nv https://phar.phpunit.de/phpunit-5.7.phar
-chmod +x phpunit-5.7.phar
-mv phpunit-5.7.phar $HOME/.phpenv/versions/5.6/bin/phpunit
+wget -nv https://phar.phpunit.de/phpunit-"$PHPUNIT_VERSION".phar
+chmod +x phpunit-"$PHPUNIT_VERSION".phar
+mv phpunit-"$PHPUNIT_VERSION".phar $HOME/.phpenv/versions/5.6/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
