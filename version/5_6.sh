@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-PHP5_6_VERSION="5.6.37"
+PHP5_6_VERSION="5.6.38"
 echo "============ Building PHP5_6_VERSION =============="
 PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development "$PHP5_6_VERSION" $HOME/.phpenv/versions/5.6
 
