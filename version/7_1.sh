@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-PHP7_1_VERSION="7.1.22"
-echo "============ Building PHP 7.1.21 =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development "$PHP7_1_VERSION" $HOME/.phpenv/versions/7.1
+PHP7_1_VERSION="7.1.23"
+echo "============ Building PHP "$PHP7_1_VERSION" =============="
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_1_VERSION" $HOME/.phpenv/versions/7.1
 
 # Setting phpenv to PHP7.1_VERSION
 echo "============ Setting phpenv to 7.1 ============"
@@ -10,7 +10,7 @@ phpenv rehash
 phpenv global 7.1
 
 # Install phpunit
-PHPUNIT_VERSION="7.3.5"
+PHPUNIT_VERSION="7.4.3"
 echo "============ Installing PHPUnit ============="
 wget -nv https://phar.phpunit.de/phpunit-"$PHPUNIT_VERSION".phar
 chmod +x phpunit-"$PHPUNIT_VERSION".phar
@@ -22,7 +22,6 @@ curl -sS http://getcomposer.org/installer | php
 chmod +x composer.phar
 mv composer.phar $HOME/.phpenv/versions/7.1/bin/composer
 
-sudo apt-get install php7.1-ldap
 #install pickle
 cd /tmp/pickle
 $HOME/.phpenv/versions/7.1/bin/composer install
