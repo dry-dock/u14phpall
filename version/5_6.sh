@@ -2,7 +2,7 @@
 
 PHP5_6_VERSION="5.6.38"
 echo "============ Building PHP5_6_VERSION =============="
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl" php-build -i development "$PHP5_6_VERSION" $HOME/.phpenv/versions/5.6
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP5_6_VERSION" $HOME/.phpenv/versions/5.6
 
 # Setting phpenv to PHP5.6_VERSION
 echo "============ Setting phpenv to 5.6 ============"
