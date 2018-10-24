@@ -59,6 +59,9 @@ export PATH=$HOME/.phpenv/bin:$PATH
 echo "PATH=$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
+apt-get install libldap2-dev libldb-dev
+ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/include/libldap.so && ln -s /usr/lib/x86_64-linux-gnu/liblber.so /usr/include/liblber.so
+
 #Download pickle
 git clone https://github.com/FriendsOfPHP/pickle.git /tmp/pickle
 ln -s /tmp/pickle/bin/pickle /usr/bin/
