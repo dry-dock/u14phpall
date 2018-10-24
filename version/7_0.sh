@@ -22,7 +22,6 @@ curl -sS http://getcomposer.org/installer | php
 chmod +x composer.phar
 mv composer.phar $HOME/.phpenv/versions/7.0/bin/composer
 
-sudo apt-get install php7.0-ldap
 #install pickle
 cd /tmp/pickle
 $HOME/.phpenv/versions/7.0/bin/composer install
