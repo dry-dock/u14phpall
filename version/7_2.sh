@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-PHP7_2_VERSION="7.2.11"
+PHP7_2_VERSION="7.2.12"
 echo "============ Building "$PHP7_2_VERSION"  =============="
 
 PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_2_VERSION" $HOME/.phpenv/versions/7.2
