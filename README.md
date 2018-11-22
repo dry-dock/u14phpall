@@ -5,8 +5,8 @@ Shippable CI image for PHP on Ubuntu 14.04. The following PHP versions are avail
 
   1. PHP 5.6.38
   2. PHP 7.0.32
-  3. PHP 7.1.23
-  4. PHP 7.2.11
+  3. PHP 7.1.24
+  4. PHP 7.2.12
 
 Each PHP version is installed with php-build and managed with phpenv. Several
 PHP extensions are also available out of the box. Unless otherwise noted, the
@@ -24,7 +24,7 @@ available in the image:
       * redis
       * zmq
 
-  2. PHP 7.0.32, PHP 7.1.22 and PHP 7.2.10
+  2. PHP 7.0.32, PHP 7.1.24 and PHP 7.2.12
       * amqp
       * bzip
       * intl
@@ -32,7 +32,9 @@ available in the image:
       * redis
       * zmq
 
-## Services:
+u14phpall Docker Hub repo: [drydock/u14phpall](https://hub.docker.com/r/drydock/u14phpall/)
 
-This image is built on top of https://github.com/dry-dock/u14all. Please check
+**Services**
+
+This image is built on top of [u14all](https://github.com/dry-dock/u14all) .Please check 
 there for a list of all the services.
