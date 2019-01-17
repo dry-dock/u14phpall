@@ -5,7 +5,7 @@ PHPENV_VERSION="7.3"
 echo "============ Building "$PHP7_3_VERSION" =============="
 PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_3_VERSION" $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"
 
-# Setting phpenv to "$PHPENV_VERSION_ALIAS"
+
 echo "============ Setting phpenv to "$PHPENV_VERSION_ALIAS" ============"
 phpenv rehash
 phpenv global "$PHPENV_VERSION_ALIAS"
