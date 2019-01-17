@@ -4,29 +4,29 @@ PHP7_2_VERSION="7.2.14"
 PHPENV_VERSION="7.2"
 echo "============ Building "$PHP7_2_VERSION"  =============="
 
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_2_VERSION" $HOME/.phpenv/versions/"$PHPENV_VERSION"
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_2_VERSION" $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"
 
-# Setting phpenv to PHP"$PHPENV_VERSION"_VERSION
-echo "============ Setting phpenv to "$PHPENV_VERSION" ============"
+# Setting phpenv to PHP"$PHPENV_VERSION_ALIAS"_VERSION
+echo "============ Setting phpenv to "$PHPENV_VERSION_ALIAS" ============"
 phpenv rehash
-phpenv global "$PHPENV_VERSION"
+phpenv global "$PHPENV_VERSION_ALIAS"
 
 # Install phpunit
 PHPUNIT_VERSION="7.5.1"
 echo "============ Installing PHPUnit ============="
 wget -nv https://phar.phpunit.de/phpunit-"$PHPUNIT_VERSION".phar
 chmod +x phpunit-"$PHPUNIT_VERSION".phar
-mv phpunit-"$PHPUNIT_VERSION".phar $HOME/.phpenv/versions/"$PHPENV_VERSION"/bin/phpunit
+mv phpunit-"$PHPUNIT_VERSION".phar $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"/bin/phpunit
 
 # Install Composer
 echo "============ Installing Composer ============"
 curl -sS http://getcomposer.org/installer | php
 chmod +x composer.phar
-mv composer.phar $HOME/.phpenv/versions/"$PHPENV_VERSION"/bin/composer
+mv composer.phar $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"/bin/composer
 
 #install pickle
 cd /tmp/pickle
-$HOME/.phpenv/versions/"$PHPENV_VERSION"/bin/composer install --no-dev
+$HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"/bin/composer install --no-dev
 
 # Install php extensions
 echo "=========== Installing PHP extensions =============="
