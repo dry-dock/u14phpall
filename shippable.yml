@@ -1,0 +1,20 @@
+language: php
+
+php: 
+  - 7.1 #7.1.25
+  - 7.2 #7.2.14
+  - 7.3 #7.3.1
+
+build: 
+  pre_ci_boot:
+    image_name: drydock/u14phpall
+    image_tag: master
+    pull: true
+  ci:
+    - php --version
+    - phpunit --version
+    - composer --version
+    - php --rf ldap_connect
+    - php --rf imagettftext
+    - php --rf FreeType
+    - php -i
