@@ -4,7 +4,7 @@ PHP7_2_VERSION="7.2.14"
 PHPENV_VERSION_ALIAS="7.2"
 echo "============ Building "$PHP7_2_VERSION"  =============="
 
-PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include" php-build -i development "$PHP7_2_VERSION" $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"
+PHP_BUILD_CONFIGURE_OPTS="--with-bz2 --enable-intl --with-ldap=/usr/include --with-freetype-dir=/usr" php-build -i development "$PHP7_2_VERSION" $HOME/.phpenv/versions/"$PHPENV_VERSION_ALIAS"
 
 
 echo "============ Setting phpenv to "$PHPENV_VERSION_ALIAS" ============"
