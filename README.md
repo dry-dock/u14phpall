@@ -3,7 +3,7 @@ u14phpall
 
 Shippable CI image for PHP on Ubuntu 14.04. The following PHP versions are available:
 
-  1. PHP 7.1.25
+  1. PHP 7.1.26
   2. PHP 7.2.14
   3. PHP 7.3.1
 
@@ -13,7 +13,7 @@ latest version of the extension at the time the image was built is what is
 available in the image:
 
 
-  1. PHP 7.1.25, PHP 7.2.14 and PHP 7.3.1
+  1. PHP 7.1.26, PHP 7.2.14 and PHP 7.3.1
       * amqp
       * bzip
       * intl
